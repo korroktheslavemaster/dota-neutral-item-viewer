@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat|Open+Sans&display=swap');
+.card {
+    background-color: #172127;
+    border-width: 2px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    min-width: 400px;
+}
+
+.card-body {
+    padding: 0rem;
+    
+}
+/* image and title */
+.card-title {
+    padding: 1rem;
+    margin-bottom: 0px;
+    background-color: #202C35;
+}
+.subtitle {
+    color: #7A7A7A;
+}
+.charges {
+    padding-right: 7px;
+    color: #929B92;
+    font-weight: 700
+}
+.item-image {
+    box-shadow: 3px 3px black;
+}
+
+.item-title {
+    font-size: 1.4rem;
+}
+
+/* attributes section */
+.card-text .attribute{
+    padding: 1rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.attribute {
+    padding-left: 1rem;
+    padding-bottom: .75rem;
+}
+.attribute .row {
+    padding-left: 1rem;
+}
+.attribute .header,
+.attribute .footer {
+    color: #7A7A7A;
+    padding-right: .2rem;
+    font-weight: 600;
+}
+
+.attribute .value {
+    font-weight: bold;
+    color: white;
+    padding-right: .2rem;
+}
+
+
+/* active abilities */
+.active-abilities .card {
+    padding: .5rem;
+    border-width: 0;
+    padding-top: .3rem;
+}
+.active-abilities .card-title{
+    font-size: 1rem;
+    font-weight: 900;
+    color: #ACACFA;
+    background: rgb(54,57,125);
+    background: linear-gradient(90deg, rgba(54,57,125,1) 25%, rgba(23,31,50,1) 90%);
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-left: .75rem;
+    margin-bottom: 0;
+}
+
+.active-abilities .description {
+    color: #9594C2;
+}
+.active-abilities .card-text {
+    padding: .75rem;
+    padding-top: .2rem;
+    background: rgb(31,40,61);
+    background: linear-gradient(90deg, rgba(31,40,61,1) 25%, rgba(23,31,50,1) 90%);
+}
+
+.active-abilities .cd-mana-text {
+    color: white;
+    font-size: .9rem;
+}
+
+
+/* passive abilities */
+.passive-abilities .card {
+    padding: .5rem;
+    border-width: 0;
+    padding-top: .3rem;
+}
+.passive-abilities .card-title, .passive-abilities .card-text {
+    background-color: #1e2832;
+}
+.passive-abilities .card-title{
+    font-size: 1rem;
+    font-weight: 900;
+    color: #8E9DB0;
+    padding-top: .5rem;
+    padding-bottom: .1rem;
+    padding-left: .75rem;
+    margin-bottom: 0;
+}
+
+.passive-abilities .description {
+    color: #7A7A7A;
+}
+.passive-abilities .card-text {
+    padding: .75rem;
+    padding-top: .1rem;
+}
+
+.passive-abilities .cd-mana-text {
+    color: white;
+    font-size: .9rem;
+}
+
+
+/* cd/mana boxes */
+.mana-box {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+
+}
+.cd-box img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.mana-box {
+    background: rgb(41,118,158);
+    background: linear-gradient(0deg, rgba(41,118,158,1) 0%, rgba(76,173,255,1) 100%);
+}
