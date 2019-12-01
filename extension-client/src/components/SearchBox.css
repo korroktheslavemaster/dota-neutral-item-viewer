@@ -1,0 +1,41 @@
+input.search-box,
+input.search-box:focus,
+input.search-box:active,
+input.search-box:hover {
+  background-color: #202c35;
+  color: #9a9a9a;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border-right-width: 0px;
+  border-color: #cccccc;
+}
+.close-button .input-group-text {
+  background-color: #202c35;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border-left-width: 0px;
+}
+
+.close-button.input-group-append {
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  /* border: none; */
+}
+
+.close-button button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  height: 1.25rem;
+  /* vertical-align: top; */
+}
+
+.close-button button i {
+  color: #9a9a9a;
+  vertical-align: top;
+}
