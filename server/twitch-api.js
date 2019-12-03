@@ -20,7 +20,7 @@ var getToken = channelId => {
   return jwt.sign(body, secret);
 };
 
-var getUrl = channelId =>
+var getPubsubUrl = channelId =>
   "https://api.twitch.tv/extensions/message/" + channelId;
 
 var getHeaders = channelId => ({
@@ -29,17 +29,15 @@ var getHeaders = channelId => ({
   Authorization: "Bearer " + getToken(channelId)
 });
 
-var getBody = itemsList => ({
+var getPubsubBody = obj => ({
   content_type: "application/json",
-  message: JSON.stringify({
-    items: itemsList
-  }),
+  message: JSON.stringify(obj),
   targets: ["broadcast"]
 });
 
 module.exports = {
   getToken,
-  getUrl,
+  getPubsubUrl,
   getHeaders,
-  getBody
+  getPubsubBody
 };
