@@ -29,6 +29,9 @@ app.post("/gamestate/:channelId", (req, res) => {
       provider && provider.timestamp
         ? provider.timestamp
         : Math.round(new Date().getTime() / 1000);
+    if (provider && provider.timestamp)
+      console.log("channel", channelId, "timestamp", provider.timestamp);
+    else console.log("channel", channelId, "no timestamp? so", timestamp);
     const namesWithoutPrefix = itemNames.map(name => String(name).substring(5));
     // console.log(namesWithoutPrefix);
     axios({
