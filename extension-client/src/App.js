@@ -3,6 +3,8 @@ import "./App.css";
 import ItemCard from "./components/ItemCard";
 import SearchBox from "./components/SearchBox";
 import { getItemsJson } from "./util/api";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 
 const twitch = window.Twitch.ext;
 class App extends Component {
@@ -12,9 +14,7 @@ class App extends Component {
     searchTerm: ""
   };
   onBroadcast = (target, contentType, message) => {
-    console.log(message);
-    twitch.rig.log(message);
-    if (contentType == "application/json") {
+    if (contentType === "application/json") {
       var parsed = JSON.parse(message);
       if (parsed.items && Array.isArray(parsed.items)) {
         this.setState({ currentItems: Array.from(new Set(parsed.items)) });
@@ -25,47 +25,41 @@ class App extends Component {
     getItemsJson.then(itemsJson => this.setState({ itemsJson }));
     // register with twitch pubsub
     twitch.listen("broadcast", this.onBroadcast);
-    twitch.onContext(function(context, strings) {
-      console.log(context);
-      console.log(strings);
-      twitch.rig.log(context);
-      twitch.rig.log(strings);
-    });
-    twitch.onAuthorized(function(auth) {
-      console.log(auth);
-    });
   }
   getItemsToDisplay = (itemsJson, currentItems, searchTerm) => {
-    if (searchTerm == "") return currentItems;
+    if (searchTerm === "") return currentItems;
     const searchTermLowerCase = String(searchTerm).toLowerCase();
-    const allItemsLowerCase = Object.keys(itemsJson).map(name =>
-      String(name).toLowerCase()
-    );
-    return allItemsLowerCase.filter(itemName =>
-      itemName.includes(searchTermLowerCase)
-    );
+    const allItemsLowerCaseTuple = Object.keys(itemsJson).map(name => [
+      name,
+      String(itemsJson[name].dname).toLowerCase()
+    ]);
+    return allItemsLowerCaseTuple
+      .filter(([name, fullName]) => fullName.includes(searchTermLowerCase))
+      .map(([name]) => name);
   };
   render() {
     const { itemsJson, currentItems, searchTerm } = this.state;
     return (
-      <div className="container">
-        <div className="container">
-          <div className="row py-1 pt-2">
-            <SearchBox
-              onSearch={value => this.setState({ searchTerm: value })}
-            />
-          </div>
-          {this.getItemsToDisplay(itemsJson, currentItems, searchTerm).map(
-            itemName =>
-              itemsJson[itemName] ? (
-                <div className="row py-1" key={itemName}>
-                  <ItemCard json={itemsJson[itemName]} />
-                </div>
-              ) : (
-                ""
-              )
-          )}
+      <div className="container outer-container">
+        <div className="row py-2 search-bar-div">
+          <SearchBox onSearch={value => this.setState({ searchTerm: value })} />
         </div>
+        <SimpleBar style={{ maxHeight: "90vh" }}>
+          <div className="container">
+            {this.getItemsToDisplay(itemsJson, currentItems, searchTerm).map(
+              itemName =>
+                itemsJson[itemName] ? (
+                  <div className="row pb-2" key={itemName}>
+                    <div className="col col-12">
+                      <ItemCard json={itemsJson[itemName]} />
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )
+            )}
+          </div>
+        </SimpleBar>
       </div>
     );
   }

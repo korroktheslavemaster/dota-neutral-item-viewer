@@ -8,17 +8,20 @@ input.search-box:hover {
   -webkit-appearance: none;
   box-shadow: none !important;
   border-right-width: 0px;
-  border-color: #cccccc;
+  border-color: #202c35;
 }
 .close-button .input-group-text {
   background-color: #202c35;
   outline: 0px !important;
   -webkit-appearance: none;
   box-shadow: none !important;
+  border-color: #202c35;  
   border-left-width: 0px;
+  /* border:none; */
 }
 
 .close-button.input-group-append {
+  border-color: #202c35;  
   -webkit-appearance: none;
   box-shadow: none !important;
   /* border: none; */
@@ -35,7 +38,11 @@ input.search-box:hover {
   /* vertical-align: top; */
 }
 
-.close-button button i {
-  color: #9a9a9a;
-  vertical-align: top;
+.close-button-icon {
+  position: absolute;
+  fill: #9a9a9a;
+  top: .75rem;
+  right: 1rem;
+  height: .8rem;
+  width: .8rem;
 }

@@ -1,18 +1,20 @@
 import React from "react";
 import "./ItemCard.css";
-import { Card, Button } from "react-bootstrap";
 import { getImageUrl } from "../util/api";
 import CdBoxImg from "../cd-box.png";
 
 export default ({ json }) => {
   return (
-    <Card className="outer-most">
-      {/* {json.img ? <Card.Img variant="top" src={getImageUrl(json.img)} /> : ""} */}
-      <Card.Body>
+    <div className="card outer-most">
+      <div className="card-body">
         <div className="card-title">
           <div className="row">
             <div className="col col-auto">
-              <img className="item-image" src={getImageUrl(json.img)} />
+              <img
+                alt="item icon"
+                className="item-image"
+                src={getImageUrl(json.img)}
+              />
             </div>
             <div className="col item-title">
               <div className="row">
@@ -62,20 +64,20 @@ export default ({ json }) => {
           {getPassiveAbilities(json)}
           {json.hint ? (
             <div className="passive-abilities">
-              <Card>
-                <Card.Text>
+              <div className="card">
+                <div className="card-text">
                   <div className="description">
                     <div dangerouslySetInnerHTML={{ __html: json.hint }} />
                   </div>
-                </Card.Text>
-              </Card>
+                </div>
+              </div>
             </div>
           ) : (
             ""
           )}
         </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 };
 
@@ -84,7 +86,7 @@ const getActiveOrUseAbilities = (json, key) => {
     <div className="active-abilities">
       {json[key]
         ? json[key].map(({ name = "", desc = "" }, idx) => (
-            <Card key={idx}>
+            <div className="card" key={idx}>
               <div className="card-title">
                 <div className="row">
                   <div className="col col-auto">Active: {name}</div>
@@ -114,7 +116,7 @@ const getActiveOrUseAbilities = (json, key) => {
                             <div className="row no-gutters">
                               <div className="col col-auto">
                                 <div className="cd-box">
-                                  <img src={CdBoxImg} />
+                                  <img alt="mana icon" src={CdBoxImg} />
                                 </div>
                               </div>
                               <div className="col">
@@ -133,7 +135,7 @@ const getActiveOrUseAbilities = (json, key) => {
               <div className="card-text">
                 <div className="description">{desc}</div>
               </div>
-            </Card>
+            </div>
           ))
         : ""}
     </div>
@@ -144,8 +146,8 @@ const getPassiveAbilities = json => (
   <div className="passive-abilities">
     {json.passive
       ? json.passive.map(({ name = "", desc = "" }, idx) => (
-          <Card key={idx}>
-            <Card.Title>
+          <div className="card" key={idx}>
+            <div className="card-title">
               <div className="row">
                 <div className="col col-auto">Passive: {name}</div>
                 <div className="col float-right">
@@ -174,7 +176,7 @@ const getPassiveAbilities = json => (
                           <div className="row no-gutters">
                             <div className="col col-auto">
                               <div className="cd-box">
-                                <img src={CdBoxImg} />
+                                <img alt="cooldown icon" src={CdBoxImg} />
                               </div>
                             </div>
                             <div className="col">
@@ -189,11 +191,11 @@ const getPassiveAbilities = json => (
                   </div>
                 </div>
               </div>
-            </Card.Title>
-            <Card.Text>
+            </div>
+            <div className="card-text">
               <div className="description">{desc}</div>
-            </Card.Text>
-          </Card>
+            </div>
+          </div>
         ))
       : ""}
   </div>

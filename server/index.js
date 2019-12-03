@@ -1,12 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 var bodyParser = require("body-parser");
-var jwt = require("jsonwebtoken");
 var axios = require("axios");
 var cors = require("cors");
-const secret = new Buffer(process.env.SECRET, "base64");
-const userId = process.env.USER_ID;
-const clientId = process.env.CLIENT_ID;
+var { getUrl, getHeaders, getBody } = require("./twitch-api");
 
 var itemsJson = require("./items.json");
 const app = express();
@@ -28,7 +25,7 @@ app.get("/items.json", (req, res) => {
   res.json(itemsJson);
 });
 
-app.post("/:channelId", (req, res) => {
+app.post("/gamestate/:channelId", (req, res) => {
   const channelId = req.params.channelId;
   const { items } = req.body;
   if (typeof items == "object") {
@@ -36,16 +33,16 @@ app.post("/:channelId", (req, res) => {
       .map(({ name = "empty" }) => name)
       .filter(name => name != "empty");
     const namesWithoutPrefix = itemNames.map(name => String(name).substring(5));
-    console.log(namesWithoutPrefix);
+    // console.log(namesWithoutPrefix);
     axios({
       method: "post",
       url: getUrl(channelId),
       headers: getHeaders(channelId),
       data: getBody(namesWithoutPrefix)
     })
-      .then(function(response) {
-        console.log(response.status);
-      })
+      // .then(function(response) {
+      //   console.log(response.status);
+      // })
       .catch(function(error) {
         console.log(error);
       });
@@ -54,36 +51,3 @@ app.post("/:channelId", (req, res) => {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-// Twitch API stuff
-
-var getToken = channelId => {
-  var exp = Math.round(new Date().getTime() / 1000) + 259200; // 3 days?
-  var body = {
-    exp: exp,
-    user_id: userId,
-    role: "external",
-    channel_id: channelId,
-    pubsub_perms: {
-      send: ["broadcast"]
-    }
-  };
-  return jwt.sign(body, secret);
-};
-
-var getUrl = channelId =>
-  "https://api.twitch.tv/extensions/message/" + channelId;
-
-var getHeaders = channelId => ({
-  "Content-Type": "application/json",
-  "Client-Id": clientId,
-  Authorization: "Bearer " + getToken(channelId)
-});
-
-var getBody = itemsList => ({
-  content_type: "application/json",
-  message: JSON.stringify({
-    items: itemsList
-  }),
-  targets: ["broadcast"]
-});
