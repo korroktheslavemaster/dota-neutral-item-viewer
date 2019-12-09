@@ -28,84 +28,6 @@
     "created": false,
     "tier": "1"
   },
-  "trident": {
-    "hint": [
-      "Combines Sange, Yasha and Kaya together."
-    ],
-    "id": 369,
-    "img": "/apps/dota2/images/items/trident_lg.png",
-    "dname": "Trident",
-    "cost": 0,
-    "charges": false,
-    "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "33",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "33",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "33",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "status_resistance",
-        "header": "+",
-        "value": "33%",
-        "footer": "Status Resistance"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "33",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "movement_speed_percent_bonus",
-        "header": "+",
-        "value": "33",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "hp_regen_amp",
-        "header": "+",
-        "value": "33%",
-        "footer": "Self HP Regen and Lifesteal Amp"
-      },
-      {
-        "key": "manacost_reduction",
-        "header": "+",
-        "value": "33%",
-        "footer": "Manacost and Manaloss Reduction"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+",
-        "value": "33%",
-        "footer": "Spell Amplification"
-      }
-    ],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": [
-      "kaya",
-      "sange",
-      "yasha",
-      ""
-    ],
-    "created": true,
-    "tier": "5"
-  },
   "iron_talon": {
     "active": [
       {
@@ -242,7 +164,7 @@
         "key": "attack_range_bonus",
         "header": "+",
         "value": "100",
-        "footer": "Attack Range <font color='#7d7d7d'>(Ranged Only)</font>"
+        "footer": "Attack Range (Ranged Only)"
       },
       {
         "key": "attack_speed_bonus",
@@ -299,9 +221,8 @@
     "attrib": [
       {
         "key": "bonus_gpm",
-        "header": "+",
-        "value": "60",
-        "footer": "GPM BONUS"
+        "header": "+GPM BONUS",
+        "value": "60"
       },
       {
         "key": "bonus_mana",
@@ -311,9 +232,8 @@
       },
       {
         "key": "bonus_damage",
-        "header": "-",
-        "value": "35",
-        "footer": "<font color='#e03e2e'>Attack Damage</font>"
+        "header": "-Attack Damage",
+        "value": "-35"
       }
     ],
     "mc": false,
@@ -428,9 +348,8 @@
       },
       {
         "key": "vision_bonus",
-        "header": "+",
-        "value": "450",
-        "footer": "Vision Bonus"
+        "header": "+Vision Bonus",
+        "value": "450"
       }
     ],
     "mc": false,
@@ -471,21 +390,18 @@
     "attrib": [
       {
         "key": "attack_lifesteal",
-        "header": "+",
-        "value": "15%",
-        "footer": "Lifesteal"
+        "header": "+Lifesteal",
+        "value": "15%"
       },
       {
         "key": "spell_lifesteal",
-        "header": "+",
-        "value": "8%",
-        "footer": "Spell Lifesteal"
+        "header": "+Spell Lifesteal",
+        "value": "8%"
       },
       {
         "key": "night_vision",
-        "header": "+",
-        "value": "250",
-        "footer": "Night Vision"
+        "header": "+Night Vision",
+        "value": "250"
       }
     ],
     "mc": false,
@@ -508,15 +424,13 @@
     "attrib": [
       {
         "key": "armor_bonus",
-        "header": "+",
-        "value": "13",
-        "footer": "ARMOR"
+        "header": "+ARMOR",
+        "value": "13"
       },
       {
         "key": "attack_speed",
-        "header": "-",
-        "value": "35",
-        "footer": "<font color='#e03e2e'>Attack Speed</font>"
+        "header": "-Attack Speed",
+        "value": "-35"
       }
     ],
     "mc": false,
@@ -567,9 +481,8 @@
     "attrib": [
       {
         "key": "debuff_amp",
-        "header": "+",
-        "value": "25%",
-        "footer": "Debuff Duration"
+        "header": "+Debuff Duration",
+        "value": "25%"
       },
       {
         "key": "spell_amp",
@@ -628,38 +541,6 @@
     "created": false,
     "tier": "1"
   },
-  "ironwood_tree": {
-    "use": [
-      {
-        "name": "Plant Tree",
-        "desc": "Targets the ground to plant a happy little tree that lasts for 20 seconds.\n\nRange: 800"
-      }
-    ],
-    "id": 304,
-    "img": "/apps/dota2/images/items/ironwood_tree_lg.png",
-    "dname": "Ironwood Tree",
-    "cost": 151,
-    "charges": false,
-    "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "7",
-        "footer": "All Attributes"
-      }
-    ],
-    "mc": false,
-    "cd": 4,
-    "lore": "",
-    "components": [
-      "branches",
-      "branches",
-      "branches"
-    ],
-    "created": true,
-    "tier": "1"
-  },
   "mango_tree": {
     "use": [
       {
@@ -715,9 +596,8 @@
     "attrib": [
       {
         "key": "secondary_stats",
-        "header": "+",
-        "value": "13",
-        "footer": "SECONDARY STATS"
+        "header": "+SECONDARY STATS",
+        "value": "13"
       }
     ],
     "mc": false,
@@ -837,9 +717,8 @@
     "attrib": [
       {
         "key": "projectile_bonus",
-        "header": "+",
-        "value": "60%",
-        "footer": "Attack Projectile Speed"
+        "header": "+Attack Projectile Speed",
+        "value": "60%"
       }
     ],
     "mc": false,
@@ -862,15 +741,13 @@
     "attrib": [
       {
         "key": "max_health",
-        "header": "+",
-        "value": "1000",
-        "footer": "Max Health Increase"
+        "header": "+Max Health Increase",
+        "value": "1000"
       },
       {
         "key": "max_mana",
-        "header": "-",
-        "value": "400",
-        "footer": "<font color='#e03e2e'>Max Mana</font>"
+        "header": "-Max Mana",
+        "value": "400"
       }
     ],
     "mc": false,
@@ -991,9 +868,8 @@
       },
       {
         "key": "turn_rate",
-        "header": "+",
-        "value": "30%",
-        "footer": "Turn Rate"
+        "header": "+Turn Rate",
+        "value": "30%"
       }
     ],
     "mc": false,
@@ -1044,44 +920,6 @@
     "lore": "",
     "components": null,
     "created": false,
-    "tier": "2"
-  },
-  "vambrace": {
-    "hint": [
-      "Also provides one of the following, based on the Vambrace's main attribute:",
-      " <font color='#ec3d06'>Strength:</font> +10% Magic Resistance ",
-      " <font color='#3ed038'>Agility:</font> +10 Attack Speed ",
-      " <font color='#00d9ec'>Intelligence:</font> +6% Spell Amp"
-    ],
-    "id": 331,
-    "img": "/apps/dota2/images/items/vambrace_lg.png",
-    "dname": "Vambrace",
-    "qual": "common",
-    "cost": 1021,
-    "charges": false,
-    "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_primary_stat",
-        "header": "+",
-        "value": "12",
-        "footer": "Main Vambrace Attribute"
-      },
-      {
-        "key": "bonus_secondary_stat",
-        "header": "+",
-        "value": "6",
-        "footer": "Other Attributes"
-      }
-    ],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": [
-      "bracer",
-      "bracer"
-    ],
-    "created": true,
     "tier": "2"
   },
   "fusion_rune": {
@@ -1220,9 +1058,8 @@
       },
       {
         "key": "bonus_armor",
-        "header": "-",
-        "value": "4",
-        "footer": "<font color='#e03e2e'>Armor</font>"
+        "header": "-Armor",
+        "value": "4"
       }
     ],
     "mc": false,
@@ -1542,7 +1379,7 @@
         "key": "attack_range_bonus",
         "header": "+",
         "value": "400",
-        "footer": "Attack Range <font color='#7d7d7d'>(Ranged Only)</font>"
+        "footer": "Attack Range (Ranged Only)"
       },
       {
         "key": "knockback_distance",
@@ -1666,56 +1503,6 @@
     "created": false,
     "tier": "5"
   },
-  "fallen_sky": {
-    "active": [
-      {
-        "name": "Fallen Sky",
-        "desc": "Transform into a meteor that strikes down at the target area after 0.5 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 50 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 90\n\n Range: 1600"
-      }
-    ],
-    "id": 371,
-    "img": "/apps/dota2/images/items/fallen_sky_lg.png",
-    "dname": "Fallen Sky",
-    "cost": 4751,
-    "charges": false,
-    "notes": "Does not get disabled by incoming damage.",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "20",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "20",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "15",
-        "footer": "HP Regeneration"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "10",
-        "footer": "Mana Regeneration"
-      }
-    ],
-    "mc": false,
-    "cd": 15,
-    "lore": "",
-    "components": [
-      "blink",
-      "meteor_hammer",
-      ""
-    ],
-    "created": true,
-    "tier": "5"
-  },
   "pirate_hat": {
     "passive": [
       {
@@ -1822,9 +1609,8 @@
       },
       {
         "key": "bonus_lifesteal",
-        "header": "+",
-        "value": "17%",
-        "footer": "Lifesteal"
+        "header": "+Lifesteal",
+        "value": "17%"
       }
     ],
     "mc": false,
@@ -1978,9 +1764,8 @@
     "attrib": [
       {
         "key": "base_attack_damage",
-        "header": "+",
-        "value": "16%",
-        "footer": "Base Attack Damage"
+        "header": "+Base Attack Damage",
+        "value": "16%"
       },
       {
         "key": "magic_resistance",
