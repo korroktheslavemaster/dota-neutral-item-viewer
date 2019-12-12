@@ -3,7 +3,17 @@ const express = require("express");
 var bodyParser = require("body-parser");
 var axios = require("axios");
 var cors = require("cors");
-var { getPubsubUrl, getHeaders, getPubsubBody } = require("./twitch-api");
+var fs = require("fs");
+var {
+  getPubsubUrl,
+  getHeaders,
+  getPubsubBody,
+  getChannelId
+} = require("./twitch-api");
+
+var gamestateTemplate = fs
+  .readFileSync("./gamestate_integration_template.cfg")
+  .toString();
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -48,6 +58,17 @@ app.post("/gamestate/:channelId", (req, res) => {
       });
   }
   res.send("ok");
+});
+
+app.get("/gamestate_integration/:channelId", (req, res) => {
+  const channelId = req.params.channelId;
+  res.setHeader("Content-Type", "text/plain");
+  res.send(gamestateTemplate.replace(/\{channel_id\}/gi, channelId));
+});
+
+app.get("/channelId/:channelName", (req, res) => {
+  const channelName = req.params.channelName;
+  getChannelId(channelName).then(id => res.send(id));
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

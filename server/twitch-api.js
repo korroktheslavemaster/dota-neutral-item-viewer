@@ -1,6 +1,6 @@
 // Twitch API stuff
 require("dotenv").config();
-
+var axios = require("axios");
 var jwt = require("jsonwebtoken");
 const secret = Buffer.from(process.env.SECRET, "base64");
 const userId = process.env.USER_ID;
@@ -35,9 +35,30 @@ var getPubsubBody = obj => ({
   targets: ["broadcast"]
 });
 
+var getChannelId = channelName =>
+  axios({
+    method: "get",
+    url: `https://api.twitch.tv/kraken/users?login=${channelName}`,
+    headers: {
+      Accept: "application/vnd.twitchtv.v5+json",
+      "Client-Id": clientId
+    }
+  })
+    .then(({ data }) => {
+      const {
+        users: [{ _id: channelId }]
+      } = data;
+      return channelId;
+    })
+    .catch(err => {
+      console.log(err);
+      return undefined;
+    });
+
 module.exports = {
   getToken,
   getPubsubUrl,
   getHeaders,
-  getPubsubBody
+  getPubsubBody,
+  getChannelId
 };
