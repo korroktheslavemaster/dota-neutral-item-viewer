@@ -60,6 +60,8 @@ app.post("/gamestate/:channelId", (req, res) => {
   res.send("ok");
 });
 
+// both the below endpoints are actually not being used right now
+// instead config.html in extension bundle itself is doing this stuff
 app.get("/gamestate_integration/:channelId", (req, res) => {
   const channelId = req.params.channelId;
   res.setHeader("Content-Type", "text/plain");

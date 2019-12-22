@@ -17,7 +17,7 @@
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "6",
+        "value": "7",
         "footer": "Agility"
       }
     ],
@@ -110,7 +110,7 @@
     "active": [
       {
         "name": "Chop",
-        "desc": "Targets a non-player enemy unit to remove 40% of its current HP.\n\nIf cast on a tree or ward, instantly destroys it.\n\nUnit Range: 350\nTree Range: 350\nWard Range: 450"
+        "desc": "Targets a non-player enemy unit to remove 50% of its current HP.\n\nIf cast on a tree or ward, instantly destroys it.\n\nUnit Range: 350\nTree Range: 350\nWard Range: 450"
       }
     ],
     "passive": [
@@ -440,27 +440,6 @@
     "created": false,
     "tier": "5"
   },
-  "elixer": {
-    "use": [
-      {
-        "name": "Consume",
-        "desc": "Restores 500 health and 250 mana to the target over 6 seconds.\n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost.\n\nRange: 250"
-      }
-    ],
-    "id": 302,
-    "img": "/apps/dota2/images/items/elixer_lg.png",
-    "dname": "Elixir",
-    "cost": 0,
-    "charges": 3,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "1"
-  },
   "vampire_fangs": {
     "id": 297,
     "img": "/apps/dota2/images/items/vampire_fangs_lg.png",
@@ -530,7 +509,7 @@
     "use": [
       {
         "name": "Imbue",
-        "desc": "Instantly restores 500 health."
+        "desc": "Instantly restores 450 health."
       }
     ],
     "id": 299,
@@ -543,7 +522,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "30",
+        "value": "35",
         "footer": "Damage"
       }
     ],
@@ -921,7 +900,14 @@
     "cost": 0,
     "charges": false,
     "notes": "",
-    "attrib": [],
+    "attrib": [
+      {
+        "key": "bonus_movement_speed",
+        "header": "+",
+        "value": "30",
+        "footer": "Movement Speed"
+      }
+    ],
     "mc": 25,
     "cd": 5,
     "lore": "",
@@ -951,7 +937,7 @@
       {
         "key": "attack_range",
         "header": "AURA BONUS ATTACK RANGE:",
-        "value": "125"
+        "value": "150"
       },
       {
         "key": "cast_range",
@@ -998,34 +984,6 @@
     ],
     "mc": false,
     "cd": 10,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "3"
-  },
-  "helm_of_the_undying": {
-    "passive": [
-      {
-        "name": "Death Delay",
-        "desc": "Survive for an extra 5 seconds after receiving a killing blow."
-      }
-    ],
-    "id": 327,
-    "img": "/apps/dota2/images/items/helm_of_the_undying_lg.png",
-    "dname": "Helm of the Undying",
-    "cost": 0,
-    "charges": false,
-    "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "6",
-        "footer": "Armor"
-      }
-    ],
-    "mc": false,
-    "cd": false,
     "lore": "",
     "components": null,
     "created": false,
@@ -1221,7 +1179,7 @@
       {
         "key": "bonus_armor",
         "header": "-",
-        "value": "4",
+        "value": "3",
         "footer": "<font color='#e03e2e'>Armor</font>"
       }
     ],
@@ -1304,7 +1262,7 @@
     "active": [
       {
         "name": "Ensnare",
-        "desc": "Ensnares the target enemy and yourself for 2 seconds.\n\n Range: 900"
+        "desc": "Ensnares the target enemy and yourself for 1.75 seconds.\n\n Range: 900"
       }
     ],
     "id": 360,
@@ -1317,7 +1275,7 @@
       {
         "key": "all_stats",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "All Attributes"
       },
       {
@@ -1338,7 +1296,7 @@
     "passive": [
       {
         "name": "Certain Strike",
-        "desc": "Empowers your next attack with 225 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
+        "desc": "Empowers your next attack with 270 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
       }
     ],
     "id": 361,
@@ -1412,7 +1370,7 @@
       {
         "key": "illusion_duration",
         "header": "IMAGE DURATION:",
-        "value": "20"
+        "value": "30"
       },
       {
         "key": "outgoing_damage_tooltip",
@@ -1427,13 +1385,13 @@
       {
         "key": "bonus_agi",
         "header": "+",
-        "value": "10",
+        "value": "14",
         "footer": "Agility"
       },
       {
         "key": "bonus_str",
         "header": "+",
-        "value": "10",
+        "value": "14",
         "footer": "Strength"
       }
     ],
@@ -1448,7 +1406,7 @@
     "active": [
       {
         "name": "Havoc",
-        "desc": "Knocks back enemies in 300 range in front of you, slowing them by 50% for 3 seconds."
+        "desc": "Knocks back enemies in 300 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1x your str as magical damage."
       }
     ],
     "id": 364,
@@ -1461,7 +1419,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "35",
+        "value": "30",
         "footer": "Damage"
       },
       {
@@ -1879,7 +1837,7 @@
       {
         "key": "armor_reduction",
         "header": "ARMOR REDUCTION:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "slow_melee",
