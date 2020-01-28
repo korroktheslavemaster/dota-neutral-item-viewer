@@ -3,7 +3,7 @@
     "passive": [
       {
         "name": "Damage Block",
-        "desc": "Gives a 100% chance to block 20 damage from incoming attacks on melee heroes, and 10 damage on ranged.\n\nHas a 50% chance to block damage from creeps."
+        "desc": "Gives a 100% chance to block 30 damage from incoming attacks on melee heroes, and 20 damage on ranged.\n\nHas a 50% chance to block damage from creeps."
       }
     ],
     "id": 71,
@@ -42,55 +42,55 @@
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "33",
+        "value": "30",
         "footer": "Strength"
       },
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "33",
+        "value": "30",
         "footer": "Agility"
       },
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "33",
+        "value": "30",
         "footer": "Intelligence"
       },
       {
         "key": "status_resistance",
         "header": "+",
-        "value": "33%",
+        "value": "30%",
         "footer": "Status Resistance"
       },
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "33",
+        "value": "30",
         "footer": "Attack Speed"
       },
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "33",
+        "value": "30",
         "footer": "Movement Speed"
       },
       {
         "key": "hp_regen_amp",
         "header": "+",
-        "value": "33%",
+        "value": "30%",
         "footer": "Self HP Regen and Lifesteal Amp"
       },
       {
         "key": "manacost_reduction",
         "header": "+",
-        "value": "33%",
+        "value": "30%",
         "footer": "Manacost and Manaloss Reduction"
       },
       {
         "key": "spell_amp",
         "header": "+",
-        "value": "33%",
+        "value": "30%",
         "footer": "Spell Amplification"
       }
     ],
@@ -110,13 +110,7 @@
     "active": [
       {
         "name": "Chop",
-        "desc": "Targets a non-player enemy unit to remove 50% of its current HP.\n\nIf cast on a tree or ward, instantly destroys it.\n\nUnit Range: 350\nTree Range: 350\nWard Range: 450"
-      }
-    ],
-    "passive": [
-      {
-        "name": "Quell",
-        "desc": "Increases attack damage against non-hero units by 18 for melee heroes, and 5 for ranged."
+        "desc": "Targets a non-player enemy unit to remove 50% of its current HP.\n\nIf cast on a tree, instantly destroys it.\n\nUnit Range: 350\nTree Range: 350"
       }
     ],
     "id": 239,
@@ -128,9 +122,16 @@
     "notes": "Has a 4 second cooldown on Trees.\nCannot target ancients.",
     "attrib": [
       {
+        "key": "bonus_attack_speed",
+        "header": "+",
+        "value": "15",
+        "footer": "Attack Speed"
+      },
+      {
         "key": "bonus_armor",
-        "header": "ARMOR:",
-        "value": "2"
+        "header": "+",
+        "value": "2",
+        "footer": "Armor"
       }
     ],
     "mc": false,
@@ -213,7 +214,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1",
+        "value": "1.25",
         "footer": "Mana Regeneration"
       }
     ],
@@ -327,7 +328,7 @@
     "active": [
       {
         "name": "Force",
-        "desc": "Dispels the user and pushes them 800 units in the direction they are facing."
+        "desc": "Dispels the user and pushes them 600 units in the direction they are facing."
       }
     ],
     "passive": [
@@ -349,12 +350,12 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "50%",
+        "value": "40%",
         "footer": "Movement Speed"
       }
     ],
     "mc": 75,
-    "cd": 6,
+    "cd": 9,
     "lore": "",
     "components": null,
     "created": false,
@@ -364,7 +365,7 @@
     "passive": [
       {
         "name": "Greater Corruption",
-        "desc": "Your attacks reduce the target's armor by -12 for 15 seconds."
+        "desc": "Your attacks reduce the target's armor by -10 for 7 seconds."
       }
     ],
     "id": 292,
@@ -377,31 +378,10 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "100",
+        "value": "75",
         "footer": "Damage"
       }
     ],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "5"
-  },
-  "phoenix_ash": {
-    "passive": [
-      {
-        "name": "Rebirth",
-        "desc": "Lethal damage is prevented and instead the wearer is healed to half health and non-ultimate ability cooldowns reset. Gets consumed on trigger."
-      }
-    ],
-    "id": 293,
-    "img": "/apps/dota2/images/items/phoenix_ash_lg.png",
-    "dname": "Phoenix Ash",
-    "cost": 0,
-    "charges": 1,
-    "notes": "",
-    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "",
@@ -423,13 +403,13 @@
       {
         "key": "cast_range_bonus",
         "header": "+",
-        "value": "450",
+        "value": "350",
         "footer": "Cast Range"
       },
       {
         "key": "vision_bonus",
         "header": "+",
-        "value": "450",
+        "value": "350",
         "footer": "Vision Bonus"
       }
     ],
@@ -457,7 +437,7 @@
       {
         "key": "spell_lifesteal",
         "header": "+",
-        "value": "8%",
+        "value": "6%",
         "footer": "Spell Lifesteal"
       },
       {
@@ -488,7 +468,7 @@
       {
         "key": "armor_bonus",
         "header": "+",
-        "value": "13",
+        "value": "12",
         "footer": "ARMOR"
       },
       {
@@ -568,7 +548,7 @@
     "passive": [
       {
         "name": "Echo Shield",
-        "desc": "Block and reflect most targeted spells back to their caster every once every 4 seconds."
+        "desc": "Block and reflect most targeted spells back to their caster once every 8 seconds."
       }
     ],
     "id": 301,
@@ -592,21 +572,6 @@
     "created": false,
     "tier": "5"
   },
-  "recipe_ironwood_tree": {
-    "id": 303,
-    "img": "/apps/dota2/images/items/recipe_lg.png",
-    "dname": "Ironwood Tree Recipe",
-    "cost": 1,
-    "charges": false,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "1"
-  },
   "ironwood_tree": {
     "use": [
       {
@@ -624,19 +589,15 @@
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "7",
+        "value": "6",
         "footer": "All Attributes"
       }
     ],
     "mc": false,
     "cd": 4,
     "lore": "",
-    "components": [
-      "branches",
-      "branches",
-      "branches"
-    ],
-    "created": true,
+    "components": null,
+    "created": false,
     "tier": "1"
   },
   "mango_tree": {
@@ -710,7 +671,7 @@
     "use": [
       {
         "name": "Building Repair",
-        "desc": "Targets a building, restoring 40% of it's health over 30 seconds. Also grants +10 armor and +4 Multishot attack during this period.\n\n Range: 600"
+        "desc": "Targets a building, restoring 40% of it's health over 30 seconds. Also grants +10 armor during this period.\n\n Range: 600"
       }
     ],
     "id": 308,
@@ -723,7 +684,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "13",
+        "value": "17",
         "footer": "HP Regeneration"
       }
     ],
@@ -738,7 +699,7 @@
     "passive": [
       {
         "name": "Silence Strike",
-        "desc": "The next attack silences the hit enemy for 2 seconds."
+        "desc": "The next attack silences the hit enemy for 1.5 seconds."
       }
     ],
     "id": 309,
@@ -904,7 +865,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "30",
+        "value": "40",
         "footer": "Movement Speed"
       }
     ],
@@ -937,7 +898,7 @@
       {
         "key": "attack_range",
         "header": "AURA BONUS ATTACK RANGE:",
-        "value": "150"
+        "value": "125"
       },
       {
         "key": "cast_range",
@@ -956,7 +917,7 @@
     "active": [
       {
         "name": "Scurry",
-        "desc": "Grants you 24 bonus movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed."
+        "desc": "Grants you 24% bonus movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed."
       }
     ],
     "hint": [
@@ -989,21 +950,6 @@
     "created": false,
     "tier": "3"
   },
-  "recipe_vambrace": {
-    "id": 329,
-    "img": "/apps/dota2/images/items/recipe_lg.png",
-    "dname": "Vambrace Recipe",
-    "cost": 1,
-    "charges": false,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "2"
-  },
   "vambrace": {
     "hint": [
       "Also provides one of the following, based on the Vambrace's main attribute:",
@@ -1015,59 +961,35 @@
     "img": "/apps/dota2/images/items/vambrace_lg.png",
     "dname": "Vambrace",
     "qual": "common",
-    "cost": 1021,
+    "cost": 0,
     "charges": false,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_primary_stat",
         "header": "+",
-        "value": "12",
+        "value": "10",
         "footer": "Main Vambrace Attribute"
       },
       {
         "key": "bonus_secondary_stat",
         "header": "+",
-        "value": "6",
+        "value": "5",
         "footer": "Other Attributes"
       }
     ],
     "mc": false,
     "cd": false,
     "lore": "",
-    "components": [
-      "bracer",
-      "bracer"
-    ],
-    "created": true,
-    "tier": "2"
-  },
-  "fusion_rune": {
-    "use": [
-      {
-        "name": "Consume",
-        "desc": "Grants the target the bonuses of every Power Rune for 50 seconds. Each use consumes a charge."
-      }
-    ],
-    "id": 313,
-    "img": "/apps/dota2/images/items/fusion_rune_lg.png",
-    "dname": "Fusion Rune",
-    "cost": 0,
-    "charges": 3,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": 120,
-    "lore": "",
     "components": null,
     "created": false,
-    "tier": "5"
+    "tier": "2"
   },
   "ocean_heart": {
     "passive": [
       {
         "name": "Water Regen",
-        "desc": "Provides you with 6 HP regen and 3 mana regen while in the river."
+        "desc": "Provides you with 8 HP regen and 4 mana regen while in the river."
       }
     ],
     "id": 354,
@@ -1142,7 +1064,7 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "150",
+        "value": "100",
         "footer": "Health"
       }
     ],
@@ -1194,7 +1116,7 @@
     "passive": [
       {
         "name": "Afterburn",
-        "desc": "Causes attacks to burn the enemy, dealing 12 damage per second for 3 seconds. Affects buildings."
+        "desc": "Causes attacks to burn the enemy, dealing 18 damage per second for 3 seconds. Affects buildings."
       }
     ],
     "id": 358,
@@ -1228,7 +1150,7 @@
     "active": [
       {
         "name": "Life Essence",
-        "desc": "Heal 425 and gain 425 max health for 15 seconds."
+        "desc": "Increases your current and max health by 425 for 15 seconds."
       }
     ],
     "id": 359,
@@ -1262,7 +1184,7 @@
     "active": [
       {
         "name": "Ensnare",
-        "desc": "Ensnares the target enemy and yourself for 1.75 seconds.\n\n Range: 900"
+        "desc": "Ensnares the target enemy and yourself for 1.75 seconds.\n\n Range: 650"
       }
     ],
     "id": 360,
@@ -1296,7 +1218,7 @@
     "passive": [
       {
         "name": "Certain Strike",
-        "desc": "Empowers your next attack with 270 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
+        "desc": "Empowers your next attack with 300 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
       }
     ],
     "id": 361,
@@ -1406,7 +1328,7 @@
     "active": [
       {
         "name": "Havoc",
-        "desc": "Knocks back enemies in 300 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1x your str as magical damage."
+        "desc": "Knocks back enemies in 300 range around you, slowing them by 50% for 3 seconds and dealing 225 + 1x your str as magical damage."
       }
     ],
     "id": 364,
@@ -1440,7 +1362,7 @@
     "passive": [
       {
         "name": "Rejuvenate ",
-        "desc": "When the wearer's health falls below 15%, they will receive a hard dispel and be healed for 300 health."
+        "desc": "When the wearer's health falls below 20%, they will receive a hard dispel and be healed for 300 health."
       }
     ],
     "id": 365,
@@ -1466,7 +1388,7 @@
   },
   "apex": {
     "hint": [
-      "Increases your primary attribute by 80%."
+      "Increases your primary attribute by 75."
     ],
     "id": 366,
     "img": "/apps/dota2/images/items/apex_lg.png",
@@ -1486,7 +1408,7 @@
     "passive": [
       {
         "name": "Knockback",
-        "desc": "Knocks back enemies with every attack."
+        "desc": "Knocks back enemies 50 distance and deals 30 pure damage with every attack."
       }
     ],
     "id": 367,
@@ -1499,13 +1421,8 @@
       {
         "key": "attack_range_bonus",
         "header": "+",
-        "value": "400",
+        "value": "250",
         "footer": "Attack Range <font color='#7d7d7d'>(Ranged Only)</font>"
-      },
-      {
-        "key": "knockback_distance",
-        "header": "KNOCKBACK DISTANCE:",
-        "value": "50"
       }
     ],
     "mc": false,
@@ -1524,7 +1441,7 @@
     "active": [
       {
         "name": "Woodland Stride",
-        "desc": "Create a path of trees behind you for 3 seconds. Trees last up to 60 seconds. "
+        "desc": "Create a path of trees behind you for 3 seconds. Trees last up to 15 seconds. "
       }
     ],
     "passive": [
@@ -1549,7 +1466,7 @@
       {
         "key": "bonus_hp_regen",
         "header": "+",
-        "value": "70",
+        "value": "50",
         "footer": "HP Regeneration"
       }
     ],
@@ -1579,7 +1496,7 @@
     "active": [
       {
         "name": "Greater Demonic Summoning",
-        "desc": "Summon 6 Level 3 Necronomicon Units that last 75 seconds."
+        "desc": "Summon 2 sets of Level 3 Necronomicon Units that last 75 seconds. Units have 50% more health and damage."
       }
     ],
     "id": 370,
@@ -1592,33 +1509,18 @@
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "35",
+        "value": "30",
         "footer": "Strength"
       },
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "35",
+        "value": "30",
         "footer": "Intelligence"
       }
     ],
     "mc": false,
     "cd": 90,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "tier": "5"
-  },
-  "recipe_fallen_sky": {
-    "id": 317,
-    "img": "/apps/dota2/images/items/recipe_lg.png",
-    "dname": "Recipe: Fallen Sky",
-    "cost": 1,
-    "charges": false,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
     "lore": "",
     "components": null,
     "created": false,
@@ -1636,7 +1538,7 @@
     "dname": "Fallen Sky",
     "cost": 4751,
     "charges": false,
-    "notes": "Does not get disabled by incoming damage.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_strength",
@@ -1678,7 +1580,7 @@
     "passive": [
       {
         "name": "Kill Bounty",
-        "desc": "Creates a bounty rune between you and your victim when you kill an enemy hero."
+        "desc": "Steals 300 gold when you kill an enemy hero."
       }
     ],
     "id": 372,
@@ -1691,7 +1593,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "250",
+        "value": "150",
         "footer": "Attack Speed"
       }
     ],
@@ -1719,12 +1621,12 @@
       {
         "key": "bonus_armor",
         "header": "+",
-        "value": "25",
+        "value": "20",
         "footer": "Armor"
       }
     ],
-    "mc": false,
-    "cd": 30,
+    "mc": 100,
+    "cd": 45,
     "lore": "",
     "components": null,
     "created": false,
@@ -1842,12 +1744,12 @@
       {
         "key": "slow_melee",
         "header": "SLOW (MELEE):",
-        "value": "30%"
+        "value": "20%"
       },
       {
         "key": "slow_range",
         "header": "SLOW (RANGE):",
-        "value": "15%"
+        "value": "10%"
       },
       {
         "key": "duration",
@@ -1906,7 +1808,7 @@
       {
         "key": "bonus_intelligence",
         "header": "+",
-        "value": "8",
+        "value": "10",
         "footer": "Intelligence"
       },
       {
