@@ -17,12 +17,12 @@
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "7",
+        "value": "8",
         "footer": "Agility"
       }
     ],
     "mc": false,
-    "cd": 6,
+    "cd": false,
     "lore": "A busted old shield that seems to block more than it should.",
     "components": null,
     "created": false,
@@ -248,7 +248,7 @@
       {
         "key": "attack_speed_bonus",
         "header": "+",
-        "value": "10",
+        "value": "15",
         "footer": "Attack Speed"
       }
     ],
@@ -301,7 +301,7 @@
       {
         "key": "bonus_gpm",
         "header": "+",
-        "value": "60",
+        "value": "70",
         "footer": "GPM BONUS"
       },
       {
@@ -411,6 +411,12 @@
         "header": "+",
         "value": "350",
         "footer": "Vision Bonus"
+      },
+      {
+        "key": "mana_regen",
+        "header": "+",
+        "value": "10",
+        "footer": "Mana Regeneration"
       }
     ],
     "mc": false,
@@ -684,7 +690,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "17",
+        "value": "20",
         "footer": "HP Regeneration"
       }
     ],
@@ -803,7 +809,7 @@
       {
         "key": "max_health",
         "header": "+",
-        "value": "1000",
+        "value": "1200",
         "footer": "Max Health Increase"
       },
       {
@@ -870,7 +876,7 @@
       }
     ],
     "mc": 25,
-    "cd": 5,
+    "cd": 4,
     "lore": "",
     "components": null,
     "created": false,
@@ -933,13 +939,13 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "24%",
+        "value": "28%",
         "footer": "Movement Speed"
       },
       {
         "key": "turn_rate",
         "header": "+",
-        "value": "30%",
+        "value": "50%",
         "footer": "Turn Rate"
       }
     ],
@@ -1089,7 +1095,7 @@
       {
         "key": "bonus_magic_resistance",
         "header": "+",
-        "value": "20%",
+        "value": "25%",
         "footer": "Magic Resistance"
       },
       {
@@ -1229,7 +1235,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 8,
+    "cd": 6,
     "lore": "",
     "components": null,
     "created": false,
@@ -1328,7 +1334,7 @@
     "active": [
       {
         "name": "Havoc",
-        "desc": "Knocks back enemies in 300 range around you, slowing them by 50% for 3 seconds and dealing 225 + 1x your str as magical damage."
+        "desc": "Knocks back enemies in 350 range around you, slowing them by 50% for 3 seconds and dealing 250 + 1x your str as magical damage."
       }
     ],
     "id": 364,
@@ -1408,7 +1414,7 @@
     "passive": [
       {
         "name": "Knockback",
-        "desc": "Knocks back enemies 50 distance and deals 30 pure damage with every attack."
+        "desc": "Knocks back enemies 50 distance and deals 40 pure damage with every attack."
       }
     ],
     "id": 367,
@@ -1466,7 +1472,7 @@
       {
         "key": "bonus_hp_regen",
         "header": "+",
-        "value": "50",
+        "value": "60",
         "footer": "HP Regeneration"
       }
     ],
@@ -1643,7 +1649,7 @@
       {
         "key": "bonus_mana",
         "header": "+",
-        "value": "225",
+        "value": "200",
         "footer": "Mana"
       },
       {
@@ -1698,7 +1704,7 @@
     "active": [
       {
         "name": "Lesser Avatar",
-        "desc": "Grants Spell Immunity for 1.75 seconds."
+        "desc": "Grants Spell Immunity for 2 seconds."
       }
     ],
     "id": 377,
@@ -1775,7 +1781,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "50",
+        "value": "60",
         "footer": "Attack Speed"
       },
       {

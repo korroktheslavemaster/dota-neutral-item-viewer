@@ -30,6 +30,7 @@ app.use(cors());
 
 app.post("/gamestate/:channelId", (req, res) => {
   const channelId = req.params.channelId;
+  console.log(req.body);
   const { items, provider } = req.body;
   if (typeof items == "object") {
     const itemNames = Object.values(items)
